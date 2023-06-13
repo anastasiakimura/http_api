@@ -42,3 +42,4 @@ class Parser:
             raise ValueError('Неверное количество параметров')
 
         return parsed
+
