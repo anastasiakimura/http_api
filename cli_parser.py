@@ -33,6 +33,10 @@ class Parser:
             raise ValueError('Вы не ввели id пользователя')
 
         parsed['id'] = argv[id_index + 1]
+        try:
+            int(parsed['id'])
+        except ValueError:
+            raise ValueError('id должен быть целочисленным типом')
 
         if len(argv) != 2:
             raise ValueError('Неверное количество параметров')
